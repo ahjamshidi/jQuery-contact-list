@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Address Book</title>
+</head>
+<body>
+    <div id="addressBook">
+        <h1>Address Book</h1>
+        <input type="text" id="searchInput" placeholder="Search contacts">
+        <button id="addContactBtn">Add Contact</button>
+
+        <ul id="contactList"></ul>
+    
+        <div id="addForm">
+            <!-- useing form to ptofit from html form validation and set onsubmit to prevent buttons from submitting forms in HTML -->
+            <form action="#" onsubmit="return false;">
+                <input class="input" type="text" name="name" placeholder="Contact Name" required minlength="3">
+                <input class="input" type="text" name="surname" placeholder="Contact Surname" required minlength="3">
+                <input class="input" type="tel" name="phone" placeholder="Contact Cellphone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                <input class="input" type="text" name="address" placeholder="Contact Address" required > 
+                <input  type="submit" value="Submit" id="submitBtn">
+                <input  type="button" value="cancel" id="cancelBtn">
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
